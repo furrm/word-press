@@ -5,7 +5,7 @@ angular.module('services-app', [])
     return{
         "name":'manifestService',
         "getManifest": function(){
-            return $resource('js/app/manifest.json').get();
+            return $resource('js/app/manifest.js').get();
         },
         "authorize": function(){
             console.log("Authorizing");
