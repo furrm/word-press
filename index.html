@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>WordPress REST</title>
+</head>
+<body>
+<a href="https://public-api.wordpress.com/oauth2/authorize?client_id=23130&redirect_uri=https://wordpress.com/&response_type=code">WordPress
+    Login</a>
+
+<div ng-controller="appCtrl">
+    <div>
+        appCtrl.name:{{name}}<br>
+        appService.name:{{serviceName}}<br>
+        appManifest:{{appManifest}}
+    </div>
+    <div>
+        <button ng-click="authorize()">Authorize</button>
+    </div>
+    <div>
+        Output:<br>
+        {{output}}
+    </div>
+</div>
+<script type="text/javascript" src="libs/angular-1.0.7/angular.js"></script>
+<script type="text/javascript" src="libs/angular-1.0.7/angular-resource.js"></script>
+
+<script type="text/javascript" src="js/app/app.js"></script>
+<script type="text/javascript" src="js/services/services-app.js"></script>
+<script type="text/javascript" src="js/controllers/controllers-app.js"></script>
+</body>
+</html>
